@@ -1,0 +1,47 @@
+/* FAQ Styles */
+.faq-section { background: var(--brand-bg); }
+
+.q-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.q-card {
+  background: rgba(18, 97, 88, 0.05);
+  border: 1px solid var(--border);
+  padding: 32px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: var(--transition);
+}
+
+.q-card:hover {
+  background: var(--white);
+  border-color: var(--brand-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-5px);
+}
+
+.q-icon {
+  width: 32px; height: 32px;
+  background: var(--brand-primary);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.q-card p {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-main);
+  line-height: 1.5;
+}
