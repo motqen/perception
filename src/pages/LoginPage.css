@@ -1,0 +1,167 @@
+/* LoginPage Styles */
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.login-card {
+  background: var(--white);
+  padding: 60px;
+  border-radius: 32px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+}
+
+.login-logo {
+  height: 50px;
+  margin-bottom: 32px;
+  mix-blend-mode: multiply;
+}
+
+.login-card h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: var(--text-main);
+}
+
+.login-card p {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Input Group — self-contained so it works without DashboardLayout.css */
+.login-card .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+[dir="rtl"] .login-card .input-group {
+  text-align: right;
+}
+
+.login-card .input-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-main, #1a1a1a);
+}
+
+.login-card .input-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid var(--border, #e2e8f0);
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--text-main, #1a1a1a);
+  background: var(--white, #ffffff);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.login-card .input-group input::placeholder {
+  color: var(--text-muted, #94a3b8);
+}
+
+.login-card .input-group input:focus {
+  border-color: var(--primary, #2bb5a0);
+  box-shadow: 0 0 0 3px rgba(43, 181, 160, 0.12);
+}
+
+.error-msg {
+  background: #FFEEED;
+  color: #DC2626;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #FECACA;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 18px;
+  border-radius: 12px;
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+.text-btn {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.2s;
+}
+
+.text-btn:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.forgot-password-flow {
+  text-align: left;
+  animation: slide-up 0.3s ease-out;
+}
+
+.forgot-password-flow .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+[dir="rtl"] .forgot-password-flow,
+[dir="rtl"] .forgot-password-flow .input-group {
+  text-align: right;
+}
+
+.forgot-password-flow .input-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-main, #1a1a1a);
+}
+
+.forgot-password-flow .input-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid var(--border, #e2e8f0);
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--text-main, #1a1a1a);
+  background: var(--white, #ffffff);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.forgot-password-flow .input-group input:focus {
+  border-color: var(--primary, #2bb5a0);
+  box-shadow: 0 0 0 3px rgba(43, 181, 160, 0.12);
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .login-card { padding: 40px 24px; border-radius: 20px; }
+}

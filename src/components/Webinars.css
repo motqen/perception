@@ -1,0 +1,114 @@
+/* Webinars Styles */
+.webinars-section { background: rgba(18, 97, 88, 0.05); }
+
+.webinars-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 60px;
+  gap: 20px;
+}
+
+.webinar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.webinar-card {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.webinar-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--brand-primary);
+}
+
+.webinar-header {
+  height: 140px;
+  padding: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.webinar-badges { display: flex; flex-direction: column; gap: 8px; }
+
+.live-badge {
+  background: var(--brand-primary);
+  color: var(--white);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  width: fit-content;
+}
+
+.spots-badge {
+  background: rgba(36, 188, 171, 0.15);
+  color: var(--brand-dark);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.webinar-price {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text-main);
+  position: absolute;
+  bottom: 20px; right: 24px;
+}
+
+.webinar-content { padding: 28px 32px 32px; }
+
+.webinar-topic {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: var(--text-main);
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.webinar-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.meta-item {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.book-btn {
+  width: 100%;
+  background: var(--brand-primary);
+  color: var(--white);
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 6px 16px rgba(36, 188, 171, 0.25);
+}
+
+.book-btn:hover {
+  background: var(--brand-dark);
+  box-shadow: 0 8px 20px rgba(36, 188, 171, 0.35);
+}
+
+@media (max-width: 768px) {
+  .webinars-top { flex-direction: column; align-items: flex-start; }
+}
