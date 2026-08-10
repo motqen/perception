@@ -2,14 +2,12 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // Auto-detect base path based on GitHub repository name in Actions environment
-const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
-const repoName = process.env.GITHUB_REPOSITORY ? process.env.GITHUB_REPOSITORY.split('/')[1] : '';
-const base = isGithubActions && repoName ? `/${repoName}/` : '/';
+const base = '/';
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: base,
+  base:'/',
   build: {
     rollupOptions: {
       output: {
